@@ -1,5 +1,6 @@
 import dashboard.LiveStudyDashBoard;
-import datastructure.ArrayList;
+import linear.doublylinkedlist.DoublyLinkedList;
+import linear.linkedlist.LinkedList;
 
 import java.io.IOException;
 import java.util.Map;
@@ -11,14 +12,16 @@ import java.util.Map;
 public class LiveStudy {
 
     public static void main(String[] args) throws IOException {
-        ArrayList numbers = new ArrayList();
+        
+        int[] array = {10, 20, 30};
+        int size = array.length;
+        int[] tmp = new int[3];
+        
+        System.arraycopy(array, 0, tmp, 0, size - 1);
 
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(30);
-        numbers.add(40);
-        numbers.add(2, 80);
-        System.out.println(numbers.toString());
+        for (int i = 0; i < size; i++)
+            System.out.println("tmp[" + i + "] = " + tmp[i]);
+        
     }
 
     public void liveStudyDashboardExecute() throws IOException {
